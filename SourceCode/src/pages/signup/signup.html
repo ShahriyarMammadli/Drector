@@ -1,0 +1,46 @@
+<!--
+  Generated template for the SignupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header  >
+  <ion-navbar >
+    <ion-title primary>Signup</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding  class="signup" style="background-image: url('assets/imgs/background.png');">
+    <div >
+      
+        <form #SignupForm="ngForm" (ngSubmit)="signUp()">
+          
+                <ion-list inset>
+                    <ion-item class="signup_form">
+                      <ion-label floating>Full Name</ion-label>
+                        <ion-input id="fullname" type="text"  name="fullname" [(ngModel)]="model.fullname" required minlength="6" maxlength="25"></ion-input>
+                      </ion-item>
+                      
+                  <ion-item class="signup_form">
+                      <ion-label floating>Username</ion-label>
+                      <ion-input type="text"  name="username" [(ngModel)]="model.username" required minlength="6" maxlength="25"></ion-input>
+                    </ion-item>
+                  <ion-item class="signup_form">
+                      <ion-label floating>Email</ion-label>
+                    <ion-input type="text"  name="email" [(ngModel)]="model.email" required email autocomplete="off"></ion-input>
+                  </ion-item>
+                  <ion-item class="signup_form">
+                      <ion-label floating>Password</ion-label>
+                    <ion-input type="password"  name="password" [(ngModel)]="model.password" required minlength="6" autocomplete="off"></ion-input>
+                  </ion-item>
+                  <ion-item class="signup_form">
+                      <ion-label floating>Repeated Password</ion-label>
+                      <ion-input type="password"  name="rpassword" [(ngModel)]="model.rpassword" required minlength="6" (change)="validationSignup()" autocomplete="off"></ion-input>
+                  </ion-item>
+                <ion-item class="signup_form"></ion-item>
+                </ion-list>
+          
+                <button ion-button class="submit-btn" full type="submit" [disabled] = "isEnabled">Register</button>
+             
+          </form>
+    </div>  
+</ion-content>

@@ -1,0 +1,23 @@
+<!--
+  Generated template for the ListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list *ngFor="let item of drones" value="item">
+    <ion-item >
+        <ion-thumbnail item-start>
+            <img src="assets/imgs/lebron.jpg">
+        </ion-thumbnail>
+        <h2>{{item.owner}}</h2>
+        <h3>Brand: {{item.brand}}</h3>
+        <p><ion-icon color = "danger" name="navigate"></ion-icon>distance:{{item.distance}} kms</p>
+    </ion-item>
+  </ion-list>
+</ion-content>

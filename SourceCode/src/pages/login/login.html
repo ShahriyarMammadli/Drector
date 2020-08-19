@@ -1,0 +1,42 @@
+<ion-content padding class="login" style="background-image: url('assets/imgs/background.png');">
+  <div >
+    <form class="login_form">
+      <ion-row>
+        <ion-col>
+          <ion-list inset>
+            
+            <ion-row>
+              <ion-col col-2></ion-col>
+              <ion-col col-8>
+                <img src="assets/imgs/logo.png"  />
+              </ion-col>
+              <ion-col col-2></ion-col>
+            </ion-row>
+          
+            <ion-item class="login_form">
+                <ion-label floating>Email</ion-label>
+              <ion-input type="text"  name="email" [(ngModel)]="model.email" required></ion-input>
+            </ion-item>
+            
+            <ion-item class="login_form">
+                <ion-label floating>Password</ion-label>
+              <ion-input type="password"  name="password" [(ngModel)]="model.password" required></ion-input>
+            </ion-item>
+
+            <ion-item class="login_form"></ion-item>
+            
+          </ion-list>
+        </ion-col>
+      </ion-row>
+      
+      <ion-row>
+        <ion-col class="signup-col">
+          <button ion-button class="submit-btn" full type="submit"  (click)="doLogin()"><ion-icon name="log-in"></ion-icon>Login</button>
+          <button ion-button class="register-btn" block clear (click)="createAccount()">Create New Account</button>
+        </ion-col>
+      </ion-row>
+      
+    </form>
+  </div>  
+  
+</ion-content>

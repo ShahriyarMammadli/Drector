@@ -1,0 +1,33 @@
+<ion-menu [content]="content" type = "overlay" id="menu">
+
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+  
+    <ion-content>
+      <ion-list>
+        <button ion-item (click) = "goTo('map')" detail-none>
+          Map
+        </button>
+        <button ion-item (click) = "goTo('camera')" detail-none>
+          Camera
+        </button>
+        <button ion-item (click) = "goTo('list')" detail-none>
+          List Drones
+        </button>
+        <button ion-item (click) = "goTo('register')" detail-none>
+          Regiter Your Drone
+        </button>
+        <button ion-item (click) = "goTo('edit')" detail-none>
+          Edit Profile
+        </button>
+        <button ion-item (click) = "logout()" detail-none>
+          Logout
+        </button>
+      </ion-list>
+    </ion-content>  
+  </ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
